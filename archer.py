@@ -7,7 +7,7 @@ import math
 # Constants
 FPS = 24
 WIDTH = 1000
-HEIGHT = 800
+HEIGHT = 500
 TARGET_SIZE = 50
 BACKGROUND = pygame.image.load("images/background.jpg")
 player_picture = pygame.image.load("images/player.png")
@@ -91,7 +91,6 @@ class Enemy(GameSprite):
             self.speed = -self.speed
 
 
-
 class Wall(GameSprite):
     def __init__(self, x, y, width, height, image):
         super().__init__(x, y, width, height, image)
@@ -154,7 +153,7 @@ def main():
 
     pygame.init()
     pygame.font.init()
-    pygame.display.set_caption("Maze")
+    pygame.display.set_caption("Archer")
 
     # Flags
     defeat = False
@@ -175,7 +174,6 @@ def main():
             victory = True
         elif time.time() - start_time >= time_limit:
             defeat = True
-
 
         # Events handler
         for event in pygame.event.get():
